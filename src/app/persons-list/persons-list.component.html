@@ -1,0 +1,15 @@
+<input [(ngModel)]="query" (ngModelChange)="search(query)" />
+
+<ul class="list-group">
+    <ul class="list-group">
+        <li *ngFor="let person of persons" class="list-group-item">
+            <div>{{ person.firstName + " " + person.lastName }}</div>
+
+            <div class="text-muted small">{{ person.phoneNumber }}</div>
+
+            <button type="button" (click)="remove(person)" class="btn btn-primary">
+        Remove
+      </button>
+        </li>
+    </ul>
+</ul>
